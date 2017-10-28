@@ -1,0 +1,106 @@
+<include file="Public/header" />
+	<!-- /头部 -->
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input class="searchinput" type="text">
+                    <i class="searchicon fa fa-search"></i>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+               <include file="Public/sidebar" />
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                    	<li class="active">控制面板</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Body -->
+                <div class="page-body">
+                	<div class="widget">
+                        <div class="widget-header">
+                            <span class="widget-caption">文章列表</span>
+                            <div class="widget-buttons">
+                                <a href="#" data-toggle="config">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" data-toggle="maximize">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                                <a href="#" data-toggle="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <a href="#" data-toggle="dispose">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div><!--Widget Buttons-->
+                        </div><!--Widget Header-->
+                        <div class="widget-body">
+                            <table class="table table-hover table-striped table-bordered">
+                                <thead class="bordered-blueberry">
+                                    <tr>
+                                        <th>
+                                            编号
+                                        </th>
+                                        <th>
+                                            缩略图
+                                        </th>
+                                        <th>
+                                            标题
+                                        </th>
+                                        <th>
+                                            作者
+                                        </th>
+                                        <th>
+                                            简述
+                                        </th>
+                                        <th>
+                                            操作
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                	<volist name="list" id="vo" key="k">
+                                		<tr>
+	                                        <td>
+	                                            {$k}
+	                                        </td>
+	                                        <td>
+	                                            {$vo['img']}
+	                                        </td>
+	                                        <td>
+	                                            {$vo['title']}
+	                                        </td>
+	                                        <td>
+	                                            {$vo['author']}
+	                                        </td>
+	                                        <td>
+	                                            {$vo['desc']}
+	                                        </td>
+	                                        <td>
+                                            	<a href="{:U('Article/del',array('id'=>$vo['id']))}" class="btn btn-default">删除</a>
+                                            	<p></p>
+                                            	<a href="{:U('Article/edit',array('id'=>$vo['id']))}" class="btn btn-default">修改</a>
+	                                        </td>
+	                                    </tr>
+                                	</volist>
+                                </tbody>
+                            </table>
+                        </div><!--Widget Body-->
+                    </div>
+                </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>
+<include file="Public/footer" />

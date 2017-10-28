@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <title>通用后台管理系统</title>
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/admin/img/favicon.ico" rel="shortcut icon">
+    <link href="__PUBLIC__/admin/css/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/weather-icons.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__PUBLIC__/admin/css/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/admin/css/demo.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery2.0.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                            <img src="__PUBLIC__/admin/img/logo.png" alt="">
+                        </small>
+                </a>
+            </div>
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+            <!-- Account Area and Settings -->
+            <div class="navbar-header pull-right">
+                <div class="navbar-account">
+                    <ul class="account-area">
+                        <li>
+                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                            	<section>
+                                    <h2><span class="profile"><span><i class="fa fa-user" style="color: green;font-size: 16px;"></i>&nbsp;欢迎您，{$_SESSION['uinfo']['user']}！</span></span></h2>
+                                </section>
+                            </a>
+                            <!--Login Area Dropdown-->
+                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                <li class="username"><a>David Stevenson</a></li>
+                                <li class="dropdown-footer">
+                                    <a href="{:U('User/logout')}">
+                                            退出登录
+                                        </a>
+                                </li>
+                                <li class="dropdown-footer">
+                                    <a href="/admin/user/changePwd.html">
+                                            修改密码
+                                        </a>
+                                </li>
+                            </ul>
+                            <!--/Login Area Dropdown-->
+                        </li>
+                        <!-- /Account Area -->
+                        <!--Note: notice that setting div must start right after account area list.
+                            no space must be between these elements-->
+                        <!-- Settings -->
+                    </ul>
+                </div>
+            </div>
+            <!-- /Account Area and Settings -->
+        </div>
+    </div>
+</div>

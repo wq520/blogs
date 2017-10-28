@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	  <div class="panel-heading"><i class="glyphicon glyphicon-th-list"></i>&nbsp;<small>标签云</small></div>
+	  <div class="panel-body" style="padding: 0px;padding-left: 10px;">
+	   <ul class="tag_cloud">
+	   	<volist name="tags" id="vo" key="k">
+	   		<volist name="vo['tags']" id="v">
+	   			<li><a href="{:U('Article/index',array('aid'=>$vo['id']))}">{$v}</a></li>
+	   		</volist>
+	   	</volist>
+	   </ul>
+	   <!--标签云随机颜色-->
+	   <script type="text/javascript">
+	   	$(function(){
+	   		$(".tag_cloud li").each(function(){
+	   			//随机数
+	   			$r=Math.ceil(Math.random()*256);
+		   		$g=Math.ceil(Math.random()*256);
+		   		$b=Math.ceil(Math.random()*256);
+	   			$(this).css("background-color","rgb("+$r+','+$g+','+$b+"0)").css("border-radius","5px");
+	   		});
+	   	});
+	   </script>
+	  </div>
+	</div>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="VIP素材,千图原创,免VIP下载,素材解析" />
+		<meta name="description" content="千图，千库，我图等各大平台免VIP下载素材！"/>
+		<title>张超博客 | 千图，千库，我图等各大平台免VIP下载素材！</title>
+		<link rel="icon" href="__PUBLIC__/home/img/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="__PUBLIC__/home/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/animate.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/mystyle.css" />
+		<script type="text/javascript" src="__PUBLIC__/home/js/jquery.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/wow.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="__APP__" style="padding:0px;margin:0px;">
+				<img src="__PUBLIC__/home/img/logo.png" height="50" />
+			  </a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="__APP__">网站首页</a></li>
+		        <volist name="nav" id="vo">
+		        	<li><a href="{:(U('Article/lst',array('id'=>$vo['id'])))}">{$vo['name']}</a></li>
+		        </volist>
+		        <li><a href="{:U('Photo/index')}">个人相册</a></li>
+		        <li><a href="http://juan.zhangchao.name" target="_blank">优惠购物</a></li>
+		        <li><a href="{:U('Vip/parse')}" target="_blank">VIP解析</a></li>
+		        <li><a href="http://site.zhangchao.name" target="_blank">自助建站系统</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<if condition="$_SESSION['uinfo']">
+		      		<li><a href="javascript:void(0)">剩余积分：{$score['score']}</a></li>
+		      		<li><a href="{:U('Login/outlog')}">退出登录</a></li>
+		      		<else />
+		      		<li><a href="{:U('Login/index')}">登录</a></li>
+		        	<li><a href="{:U('Register/index')}">注册</a></li>
+		      	</if>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div style="height: 60px;"></div>
+		<div class="container">
+			<div class="row">
+				<marquee width="100%" height="30" direction="right" behavior="alternate" scrollamount="6" scrolldelay="100" style="color:blue;font-size:16px;">喜欢本站吗？那就加入我们一起探讨吧，群号：542497886.目前支持千图，我图，90设计解析,我会尽快更新其他平台!</marquee>
+			</div>
+		</div>
+		<!--导航二-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 nav_two">
+					<nav class="navbar">
+						<ul class="nav navbar-nav">
+							<li><a href="__APP__"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">文章</a></li>
+							<li><a href="{:U('About/me')}">About</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">Download</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">Case</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	<!--模态框-->
+		<!-- Small modal -->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" id="myModal" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		      	
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default btn_model_colse" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	<!--头部结束-->
+<!--content start-->
+		<div class="container">
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-md-8">
+					<!--解析页面-->
+					<div class="alert alert-danger alert-dismissible fade in" role="alert">
+				      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+				      <h4>“全网通”VIP解析</h4>
+				      <p>所有素材网站,一站式解析!</p>
+				      <p>注：会员人数没有达到300之前，每天总下载量限制为60次，600人翻倍，依次类推！</p>
+				      <p>①：目前只支持千图，我图，90设计解析,下周我会更新其他平台,敬请期待......</p>
+				      <p>②：如果你愿意支持我,就使用我的APP购物,具体操作请点击导航上的 优惠购物 </p>
+					  <p>注：使用APP可以领取淘宝，天猫的百万优惠券，购物更省哟！</p>
+				      <p>
+				      	<a href="tencent://message/?uin=416716328&Site=&menu=yes" class="btn btn-danger">有疑问？点击与我联系！</a>
+				      </p>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-12 col-sm-12" style="line-height: 30px;">
+				    		<label class="col-sm-2 control-label">素材地址：</label>
+				    		<div class="input-group">
+						      <input type="text" class="form-control scurl" placeholder="请输入你要解析的素材地址">
+						      <span class="input-group-btn">
+						        <button class="btn btn-primary do_parse" type="button">立即解析</button>
+						      </span>
+						    </div><!-- /input-group -->
+				    	</div>
+				    	<script type="text/javascript">
+				    		$(function(){
+				    			$("#address1").hide();
+				    			$("#address2").hide();
+				    			$(".do_parse").click(function(){
+				    				var parseurl="{:U('Vip/doParse')}";
+					    			var scurl=$(".scurl").val();
+					    			$.ajax({  
+								    url:parseurl, //要请求的路径  
+								    data:{scurl:scurl},  //请求方法，请求数据  
+								    async:true, //是否为异步操作  
+								    cache:false,    //是否缓存结果  
+								    type:"post",    //请求方式  
+								    dataType:"json",    //服务器返回数据是什么类型  
+								    success:function(data){   //此函数在服务器执行成功时被调用，参数result是服务器返回的值
+								    	if(data['status']==0){
+											$('#myModal').modal("show");
+								    		$(".modal-title").text(data['message']);
+											$(".modal-body").html("下载地址一：<a target='_blank' href='"+data['urlList'][0]+"'>点击下载</a><br/>下载地址二：<a target='_blank' href='"+data['urlList'][1]+"'>点击下载</a>");
+								    	}else{
+								    		$('#myModal').modal("show");
+								    		$(".modal-title").text(data['message']);
+								    	}
+										$(".btn_model_colse").click(function(){
+											location.reload(true);
+										});
+								    }
+								})
+					    		});
+				    		});
+				    	</script>
+				    </div>
+				    <div class="page-header" style="margin-bottom: 5px;">
+					  <h3 style="margin: 0px;">最近会员解析记录</h3>
+					</div>
+					<div class="col-md-12">
+						<div class="panel panel-default">
+						  <div class="panel-body" style="padding: 0px;padding-left: 10px;">
+						  	 {:W('Right/newparse')}
+						  </div>
+						</div>						
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+<include file="Public/footer" />

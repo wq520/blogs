@@ -1,0 +1,24 @@
+[ 2017-10-26T16:22:43+08:00 ] 117.34.13.6 /Uploads/admin/banner/59d8d5539f689.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+ERR: 无法加载模块:Uploads
+
+[ 2017-10-26T16:22:43+08:00 ] 117.34.13.48 /Uploads/admin/banner/59d8d56760b22.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+ERR: 无法加载模块:Uploads
+
+[ 2017-10-26T18:22:42+08:00 ] 122.190.2.42 /Uploads/admin/banner/59d8d5539f689.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+ERR: 无法加载模块:Uploads
+
+[ 2017-10-26T18:22:42+08:00 ] 122.190.2.78 /Uploads/admin/banner/59d8d56760b22.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+ERR: 无法加载模块:Uploads
+

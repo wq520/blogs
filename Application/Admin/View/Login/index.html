@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><!--Head--><head>
+    <meta charset="utf-8">
+    <title>登录后台管理系统</title>
+    <meta name="description" content="login page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic __PUBLIC__/admins-->
+    <link href="__PUBLIC__/admin/css/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Beyond __PUBLIC__/admins-->
+    <link id="beyond-link" href="__PUBLIC__/admin/css/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/admin/css/demo.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+</head>
+<!--Head Ends-->
+<!--Body-->
+<body>
+    <div class="login-container animated fadeInDown">
+        <form action="{:U('Login/login')}" method="post" id="mylogin">
+            <div class="loginbox bg-white">
+                <div class="loginbox-title">后台登录</div>
+                <div class="loginbox-textbox">
+                    <input type="text" class="form-control" placeholder="请输入用户名" name="username">
+                </div>
+                <div class="loginbox-textbox">
+                    <input type="password" class="form-control" placeholder="请输入密码" name="password">
+                </div>
+                <div class="loginbox-textbox">
+                    <input type="text" class="form-control" placeholder="请输入验证码" name="code">
+                </div>
+                <div class="loginbox-textbox">
+					<img src="{:U('Login/code')}" onclick="this.src=this.src+'?'+Math.random();" />
+                </div>
+                <div class="loginbox-submit">
+                    <input class="btn btn-primary btn-block" value="Login" type="submit" id="subbtn">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--Basic Scripts-->
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery2.0.0.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/bootstrap.js"></script>
+    <!--Beyond Scripts-->
+    <script type="text/javascript" src="__PUBLIC__/admin/js/beyond.js"></script>
+    <!--Beyond Scripts-->
+    <script type="text/javascript">
+    	var loginurl="{:U('Login/login')}";
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/common.js" ></script>
+</body>
+</html>

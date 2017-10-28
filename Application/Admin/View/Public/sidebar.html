@@ -1,0 +1,152 @@
+ <ul class="nav sidebar-menu">
+    <!--Dashboard-->
+    <li <if condition="CONTROLLER_NAME=='Index'">class="open"</if>>
+    	<a href="{:U('Index/index')}" class="menu-dropdown">
+            <i class="menu-icon fa fa-home"></i>
+            <span class="menu-text">系统首页</span>
+            <i class="menu-expand"></i>
+        </a>
+    </li>
+    <li <if condition="strtolower(CONTROLLER_NAME) eq 'user'"> class="open"</if>>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-lock"></i>
+            <span class="menu-text">权限管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" <if condition="CONTROLLER_NAME=='User'">class="open"</if>>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'user' && strtolower(ACTION_NAME eq 'add')">class="active"</if>>
+                <a href="{:U('User/add')}">
+                    <span class="menu-text">添加管理员</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'user' && strtolower(ACTION_NAME eq 'index')">class="active"</if>>
+                <a href="{:U('User/index')}">
+                    <span class="menu-text">管理员列表</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'user' && strtolower(ACTION_NAME eq 'group')">class="active"</if>>
+                <a href="{:U('User/group')}">
+                    <span class="menu-text"> 添加规则组 </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'Common' && strtolower(ACTION_NAME eq 'addindex')">class="active"</if>>
+                <a href="{:U('Common/addindex')}">
+                    <span class="menu-text"> 更新权限 </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li> 
+	
+	<li <if condition="strtolower(CONTROLLER_NAME) eq 'type'"> class="open"</if>>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-lock"></i>
+            <span class="menu-text">分类管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" <if condition="CONTROLLER_NAME=='Type'">class="open"</if>>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'type' && strtolower(ACTION_NAME eq 'add')">class="active"</if>>
+                <a href="{:U('Type/addType')}">
+                    <span class="menu-text">
+                        添加分类                                    </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'type' && strtolower(ACTION_NAME eq 'index')">class="active"</if>>
+                <a href="{:U('Type/index')}">
+                    <span class="menu-text">
+                        分类列表                                    </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li>
+	
+    <li <if condition="strtolower(CONTROLLER_NAME) eq 'article'"> class="open"</if>>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-file-text"></i>
+            <span class="menu-text">文章管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" <if condition="CONTROLLER_NAME=='Article'">class="open"</if>>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'article' && strtolower(ACTION_NAME eq 'add')">class="active"</if>>
+                <a href="{:U('Article/add')}">
+                    <span class="menu-text">
+                        添加文章                                    </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'article' && strtolower(ACTION_NAME eq 'index')">class="active"</if>>
+                <a href="{:U('Article/index')}">
+                    <span class="menu-text">
+                        文章列表                                    </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li> 
+    
+    <li <if condition="strtolower(CONTROLLER_NAME) eq 'photo'"> class="open"</if>>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-file-text"></i>
+            <span class="menu-text">相册管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" <if condition="CONTROLLER_NAME=='photo'">class="open"</if>>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'photo' && strtolower(ACTION_NAME eq 'add')">class="active"</if>>
+                <a href="{:U('Photo/add')}">
+                    <span class="menu-text">添加相册</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'photo' && strtolower(ACTION_NAME eq 'upimg')">class="active"</if>>
+                <a href="{:U('Photo/upimg')}">
+                    <span class="menu-text">图片上传</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li> 
+    
+    <li <if condition="strtolower(CONTROLLER_NAME) eq 'banner'"> class="open"</if>>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-file-text"></i>
+            <span class="menu-text">轮播图管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" <if condition="CONTROLLER_NAME=='banner'">class="open"</if>>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'banner' && strtolower(ACTION_NAME eq 'doAdd')">class="active"</if>>
+                <a href="{:U('Banner/doAdd')}">
+                    <span class="menu-text">添加轮播图</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li <if condition="strtolower(CONTROLLER_NAME) eq 'banner' && strtolower(ACTION_NAME eq 'index')">class="active"</if>>
+                <a href="{:U('Banner/index')}">
+                    <span class="menu-text">轮播图列表</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li> 
+    
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">系统</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu">
+            <li>
+                <a href="/admin/document/index.html">
+                    <span class="menu-text">
+                        配置                                   </span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>                            
+    </li>
+</ul>

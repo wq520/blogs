@@ -1,0 +1,96 @@
+<include file="Public/header" />
+	<!-- /头部 -->
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input class="searchinput" type="text">
+                    <i class="searchicon fa fa-search"></i>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+               <include file="Public/sidebar" />
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                    	<li class="active">分类管理</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Body -->
+                <div class="page-body">
+                	<div class="widget">
+                        <div class="widget-header">
+                            <span class="widget-caption">添加分类</span>
+                            <div class="widget-buttons">
+                                <a href="#" data-toggle="config">
+                                    <i class="fa fa-cog yellow"></i>
+                                </a>
+                                <a href="#" data-toggle="maximize">
+                                    <i class="fa pink fa-expand"></i>
+                                </a>
+                                <a href="#" data-toggle="collapse">
+                                    <i class="fa fa-minus blue"></i>
+                                </a>
+                                <a href="#" data-toggle="dispose">
+                                    <i class="fa fa-times darkorange"></i>
+                                </a>
+                            </div><!--Widget Buttons-->
+                        </div><!--Widget Header-->
+                        <div class="widget-body" style="height: auto;">
+                        	<div>
+                            <form class="form-horizontal form-bordered" role="form" action="{:U('Photo/upimg')}" method="post"  enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">选择相册</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" name="type">
+                                        	<volist name="list" id="vo">
+                                        		<option value="{$vo['id']}">{$vo['title']}</option>
+                                        	</volist>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">您要上传的图片</label>
+                                    <div class="col-sm-4">
+                                    	<div class="input-group" style="margin: 5px 0px;border: solid 1px #ddd;padding: 5px;">
+										    <input type="file" name="cover[]" class="form-control">&nbsp;
+										    <input type="text" name="desc[]" class="form-control" placeholder="请输入这张图片的描述">
+										</div>
+										<a class="btn btn-default addupimg"><span class="glyphicon glyphicon-plus"></span>再添加一张图片</a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    	
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-5">
+                                        <button type="submit" class="btn btn-palegreen">确认添加</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <script type="text/javascript">
+                            	$(".addupimg").click(function(){
+                            		$str="<div class='input-group' style='margin: 5px 0px;border: solid 1px #ddd;padding: 5px;'>"
+                            		+"<input type='file' name='cover[]' class='form-control'>&nbsp;"
+                            		+"<input type='text' name='desc[]' class='form-control' placeholder='请输入这张图片的描述'></div>";
+                            		$(this).parent().append($str);
+                            	});
+                            </script>
+                        </div>
+                        </div><!--Widget Body-->
+                    </div>
+                </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>
+<include file="Public/footer" />

@@ -1,0 +1,42 @@
+<block name="link">
+	<script type="text/javascript" src="__PUBLIC__/v2/wangEditor/wangEditor.min.js" ></script>
+</block>
+<extend name="Base/base" />
+<block name="body">
+	<div class="row">
+		<div class="col-sm-1">
+			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+		</div>
+		<div class="col-sm-11">
+			<div class="page-header">
+			  <h1 style="font-size: 16px;font-weight: bold;">{$list['title']}</h1>
+			  <p style="margin: 5px 0px;">
+				<span class="pull-right" style="padding-right: 0;"> 
+				<i class="layui-icon">&#xe63a;</i> 13 <i class="layui-icon">&#xe6c6;</i> 623</span>
+				<span class="clearfix"></span>
+			 </p>
+			</div>
+			<div class="article_content">
+				{$list['content']|htmlspecialchars_decode=###}
+			</div>
+			<div class="commont_box">
+				<div class="page-header">
+				  <h1 style="font-size: 16px;">有什么想法、冲我来！不要憋坏了&nbsp;<small>Give my opinion</small></h1>
+				</div>
+				<!--评论框-->
+				<div class="layui-input-block" style="width: 100%;margin: 0px;">
+					<!--PC和WAP自适应版-->
+					<div id="SOHUCS" sid="{$list['id']}" ></div> 
+					<script type="text/javascript"> 
+					(function(){ 
+					var appid = 'cysIwtFax'; 
+					var conf = 'prod_7704a0ad68faab356d6f98b60ee99d62'; 
+					var width = window.innerWidth || document.documentElement.clientWidth; 
+					if (width < 960) { 
+					window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+			    </div>
+			</div>
+		</div>
+	</div>
+</block>

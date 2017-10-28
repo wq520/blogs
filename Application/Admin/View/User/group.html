@@ -1,0 +1,82 @@
+<include file="Public/header" />
+	<!-- /头部 -->
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input class="searchinput" type="text">
+                    <i class="searchicon fa fa-search"></i>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+               <include file="Public/sidebar" />
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                    	<li class="active">控制面板</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Body -->
+                <div class="page-body">
+                	<div class="container">
+                		<div class="row">
+                			<div class="panel panel-default">
+							  <div class="panel-heading">添加规则组</div>
+							  <div class="panel-body">
+							    <form class="form-horizontal" action="{:U('Auth/addgroup')}" method="post">
+								  <div class="form-group">
+								  	<label class="col-sm-2 control-label">规则描述</label>
+								  	<div class="col-sm-6">
+								  		<span class="input-icon">
+	                                        <input name="title" type="text" placeholder="请输入规则组描述" class="form-control input-lg">
+	                                        <i class="fa  fa-wrench palegreen"></i>
+	                                    </span>
+								  	</div>
+	                                </div>
+	                                <div class="form-group">
+								  	<label class="col-sm-2 control-label">请选择规则</label>
+								  	<div class="col-sm-6">
+							  			<volist name="list" id="vo" key="k">
+							  				<div class="row">
+							  					<div class="col-sm-2">
+							  						规则组{$k}
+							  					</div>
+							  					<div class="col-sm-10">
+							  						<div class="checkbox">
+							  							<volist name="vo" id="v">
+							  								<label>
+					                                            <input type="checkbox"value="{$v['id']}" class="colored-blue" name="rules[]">
+					                                            <span class="text">{$v['title']}</span>
+					                                        </label>&nbsp;&nbsp;
+							  							</volist>
+				                                    </div>
+							  					</div>
+							  				</div>
+							  			</volist>
+								  	</div>
+	                               </div>
+								  <div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-5">
+								      <button type="submit" class="btn btn-default">确认添加</button>
+								    </div>
+								  </div>
+								</form>
+							  </div>
+							</div>
+                		</div>
+                	</div>
+                </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>
+<include file="Public/footer" />

@@ -1,0 +1,50 @@
+{:W('Public/header')}
+<!--content start-->
+		<div class="container">
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-md-8">
+					<div class="row">
+					  <volist name="list" id="vo">
+					  	<div class="col-sm-6 col-md-4">
+						    <a href="{:U('Photo/person',array('id'=>$vo['id']))}" style="text-decoration: none;color:#000;">
+							    <div class="thumbnail">
+							      <img src="__ROOT__/Uploads/admin/photo/{$vo['cover']}" style="width: 220px;height: 220px;border-radius: 5px;" alt="{$vo['title']}">
+							      <div class="caption">
+							        <h4>{$vo['title']}</h4>
+							        <p>{$vo['desc']}</p>
+							        <p><a href="{:U('Photo/person',array('id'=>$vo['id']))}" class="btn btn-primary" role="button">查看所有</a></p>
+							      </div>
+							    </div>
+						    </a>
+						  </div>
+					  </volist>
+					</div>
+					<!--列表开始-->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="box" id="show">
+								{$page}
+							</div>
+							<script type="text/javascript">
+								$('#show').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+								$('#show span').parent().addClass('active');
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							{:W("Right/tags")}
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+<include file="Public/footer" />

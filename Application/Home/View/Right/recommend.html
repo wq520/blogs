@@ -1,0 +1,22 @@
+<div class="row">
+	<volist name="list" id="vo">
+		<div class="col-md-6" style="padding: 0px;">
+			<div class="media recommend">
+			  <div class="media-left media-middle recommend_img">
+			    <a href="#">
+			      <img class="media-object" src="__ROOT__/Uploads/admin/article/{$vo['img']}" width="100" height="100" alt="...">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			  	<a href="{:U('Article/index',array('aid'=>$vo['id']))}">
+			    <h5 class="media-heading" style="width: 70%;padding-right: 15%;line-height: 2em;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;white-space:nowrap;">{$vo['title']}</h5>
+			    <div class="content_body">
+			    	{$vo['desc']}
+			    </div>
+			  </div>
+			  <span class="label label-default recommend_lable">推荐</span>
+			  </a>
+			</div>
+		</div>
+	</volist>
+</div>

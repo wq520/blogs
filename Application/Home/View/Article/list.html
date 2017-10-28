@@ -1,0 +1,38 @@
+<extend name="Base/base" />
+<block name="body">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="page-header" style="margin-top: 20px;">
+			  <h1 style="font-size: 20px;">文章列表&nbsp;<small>Articles List</small></h1>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<volist name="list" id="vo">
+				<div class="media article_list">
+				  <div class="media-left media-middle">
+				    <a href="javascript:void(0)">
+				      <img class="media-object" width="160" height="100" src="__ROOT__/Uploads/admin/article/{$vo['img']}" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading article_title"><a href="{:U('Article/index',array('aid'=>$vo['id']))}">{$vo['title']}</a></h4>
+				    <p style="margin: 5px 0px;">
+						<span><a href="{:U('Article/index',array('aid'=>$vo['id']))}"><img src="__PUBLIC__/v2/img/7.jpg" alt="{$vo['author']}">{$vo['author']}</a></span>
+						<span style="margin: 0px 20px;">{$vo['addtime']}</span>
+						<span class="pull-right" style="padding-right: 0;"> 
+						<i class="layui-icon">&#xe63a;</i> 13 <i class="layui-icon">&#xe6c6;</i> 623</span>
+					</p>
+					<div class="article_desc">
+						{$vo['desc']}
+					</div>
+				  </div>
+				</div>
+			</volist>
+		</div>
+		<div class="col-sm-12 text-center">
+			<ul class="pagination">
+			    {$page}
+			  </ul>
+		</div>
+	</div>
+</block>

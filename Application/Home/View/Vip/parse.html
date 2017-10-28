@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="VIP素材,千图原创,免VIP下载,素材解析" />
+		<meta name="description" content="千图，千库，我图等各大平台免VIP下载素材！"/>
+		<title>张超博客 | 千图，千库，我图等各大平台免VIP下载素材！</title>
+		<link rel="icon" href="__PUBLIC__/home/img/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="__PUBLIC__/home/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/animate.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/mystyle.css" />
+		<script type="text/javascript" src="__PUBLIC__/home/js/jquery.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/wow.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="__APP__" style="padding:0px;margin:0px;">
+				<img src="__PUBLIC__/home/img/logo.png" height="50" />
+			  </a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="__APP__">网站首页</a></li>
+		        <volist name="nav" id="vo">
+		        	<li><a href="{:(U('Article/lst',array('id'=>$vo['id'])))}">{$vo['name']}</a></li>
+		        </volist>
+		        <li><a href="{:U('Photo/index')}">个人相册</a></li>
+		        <li><a href="http://juan.zhangchao.name" target="_blank">优惠购物</a></li>
+		        <li><a href="{:U('Vip/parse')}" target="_blank">VIP素材解析</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<if condition="$_SESSION['uinfo']">
+		      		<li><a href="javascript:void(0)">剩余积分：{$score['score']}</a></li>
+		      		<li><a href="{:U('Login/outlog')}">退出登录</a></li>
+		      		<else />
+		      		<li><a href="{:U('Login/index')}">登录</a></li>
+		        	<li><a href="{:U('Register/index')}">注册</a></li>
+		      	</if>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div style="height: 60px;"></div>
+		<div class="container">
+			<div class="row">
+				<marquee width="100%" height="30" direction="right" behavior="alternate" scrollamount="6" scrolldelay="100">只有工作能使我快乐!</marquee>
+			</div>
+		</div>
+		<!--导航二-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 nav_two">
+					<nav class="navbar">
+						<ul class="nav navbar-nav">
+							<li><a href="__APP__"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">文章</a></li>
+							<li><a href="{:U('About/me')}">About</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">Download</a></li>
+							<li><a href="javascript:alert('正在努力开发中');">Case</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	<!--模态框-->
+		<!-- Small modal -->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" id="myModal" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		      	
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default btn_model_colse" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	<!--头部结束-->
+<!--content start-->
+		<div class="container">
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-md-8 text-center parse_box">
+					<p>本站博客已停止解析！</p>
+					<p>新平台【全新打造】：<a href="http://vip.zhangchao.name" target="_blank">点击访问新平台</a></p>
+					<p>专属解析软件【全网独一无二】：<a href="http://www.zhangchao.name/vipparse.exe" target="_blank">点击即可下载</a></p>
+					<p>加群体验机器人解析：<a href="https://jq.qq.com/?_wv=1027&k=4BFQS7U" target="_blank">点击链接加入群【VIP破解网_VIP素材解析】</a></p>
+					<div class="row" style="margin-top:20px;">
+					<div class="col-md-12">
+						<div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
+					    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+					      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+					      <strong>張超博客素材解析</strong>
+					    </div>
+
+					    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+					      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+					      <h4>重要提示</h4>
+					      <p>目前仅支持千图网素材解析！！！！</p>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					  <div class="panel-heading">解析面板</div>
+					  <div class="panel-body">
+					    <form class="form-horizontal" method="post" action="{:U('Vip/picparse')}" id="myform" onsubmit="return false;">
+						  <div class="form-group">
+						    <label class="col-sm-2 control-label">素材地址：</label>
+						    <div class="col-sm-6">
+						      <input type="text" name="scurl" class="form-control" placeholder="请输入素材地址">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label class="col-sm-2 control-label">验证码：</label>
+						    <div class="col-sm-6">
+						    <div class="row">
+						    	<div class="col-sm-8">
+							    	<input type="text" name="code" class="form-control" placeholder="请输入验证码">
+							    </div>
+							    <div class="col-sm-4">
+							    	<img src="{:U('Login/code')}" height="34">
+							    </div>
+						    </div>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-6">
+						      <button type="submit" class="btn btn-info btn-block">立即解析</button>
+						    </div>
+						  </div>
+						</form>
+					  </div>
+					</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							{:W("Right/index")}
+						</div>
+						<div class="col-md-12">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+			<script type="text/javascript" src="__PUBLIC__/home/js/jquery2.0.0.min.js"></script>
+			<script type="text/javascript" src="__PUBLIC__/home/js/jquery.base64.js"></script>
+			<script type="text/javascript" src="__PUBLIC__/layer/layer.js"></script>
+			<script type="text/javascript">
+				$("#myform").submit(function(){
+					//获取url
+					var formurl=$("#myform").attr("action");
+					var scurl=$("input[name='scurl']").val();
+					var code=$("input[name='code']").val();
+					$.ajax({
+						  type:'post',
+						  async:true, 
+						  url:formurl,
+						  data:{scurl:scurl,code:code},
+						  dataType:'json',
+						  success:function(data){
+						  	layer.msg(data.msg);
+							  		var html='<div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">'+
+						    '<div class="alert alert-warning alert-dismissible fade in" role="alert">'+
+						      '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>'+
+						      '<strong>張超博客素材解析</strong>'+
+						    '</div>'+
+
+						    '<div class="alert alert-danger alert-dismissible fade in" role="alert">'+
+						      '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>'+
+						      '<h4>重要提示</h4>'+
+						      '<p>目前仅支持千图网素材解析！！！！</p>'+
+						    '</div>'+
+						  '</div>';
+							  		$(".parse_box").append();
+							  }, 
+						  error:function(){ 
+						    //请求出错处理 
+						    layer.msg("发生未知错误！");
+						  } 
+						}); 
+					return false;
+				});
+			</script>
+<include file="Public/footer" />
